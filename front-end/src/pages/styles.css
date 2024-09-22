@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0.1rem 1rem;
+  transition-duration: 0.7s;
+  background-color: #fff;
+  z-index: 999;
+}
+
+nav-container.scrolled {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+}
+
+.Hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("images/blog2.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.Hero-section h1 {
+  font-size: 40px;
+  font-weight: 600;
+  padding-top: 20px;
+  color: white;
+}
+
+.Hero-section p {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  color: white;
+}
+
+h1 span {
+  color: red;
+}
+
+.heading-blog{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.heading-blog h1{
+  font-size: 40px;
+  font-weight: 600;
+
+}
+
+
+
+/*  style for  Blogs */
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+button {
+  background-color: rgb(218, 212, 92);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+button:hover {
+  background-color: rgb(205, 146, 36);
+  transition: 0.3s ease-in;
+}
+
+.blog-form {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  width: 70%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+
+form input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fafafa;
+  margin: 5px 0;
+}
+
+form::placeholder {
+  font-family: sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.blogs {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 16px;
+  text-overflow: ellipsis;
+}
+
+.card span {
+  font-size: 14px;
+  color: #666;
+  display: block;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.delete-blog {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+}
+
+/* Blog Details style */
+
+.blog-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blog-details img {
+  height: 250px;
+  width: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+
+.blog-details span {
+  font-size: 14px;
+  color: #aaa6a6;
+  display: block;
+  font-weight: 600;
+}
+
+.blog-details h1 {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.blog-details p {
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+/* Responsive Styles */
+
+/* For screens less than 1024px (tablets) */
+@media (max-width: 1024px) {
+  .Hero-section h1 {
+    font-size: 35px;
+  }
+
+  .Hero-section p {
+    font-size: 16px;
+  }
+
+  .card {
+    height: auto;
+    width: 100%;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+
+/* For screens less than 768px (large smartphones) */
+@media (max-width: 768px) {
+  .Hero-section {
+    height: 50vh;
+    padding: 15px;
+  }
+
+  .Hero-section h1 {
+    font-size: 28px;
+  }
+
+  .Hero-section p {
+    font-size: 15px;
+  }
+
+  .card {
+    height: auto;
+    width: 100%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .blog-details img {
+    height: 200px;
+    width: 100%;
+  }
+
+  fieldset {
+    width: 100%;
+  }
+
+  .blog-details h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+/* For screens less than 480px (small smartphones) */
+
+@media (max-width: 480px) {
+  .Hero-section {
+    height: 40vh;
+    padding: 10px;
+  }
+
+  .Hero-section h1 {
+    font-size: 22px;
+  }
+
+  .Hero-section p {
+    font-size: 14px;
+  }
+
+  .card {
+    height: auto;
+    width: 100%;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .blog-details img {
+    height: 150px;
+    width: 100%;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 16px;
+  }
+}
